@@ -1,0 +1,72 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "The portfolio site for Maxwell Brown",
+  "author": "Maxwell Brown <maxwellbrown1990@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.19.1",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.2.37",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-plugin-typography": "^2.3.21",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-graphql": "^2.1.31",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^5.0.0",
+    "styled-icons": "^9.2.0",
+    "typography": "^0.16.19",
+    "typography-theme-github": "^0.16.19"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^5.0.15",
+    "@types/styled-components": "^4.4.2",
+    "@types/typography": "^0.16.3",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-node": "^0.3.3",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint . --fix",
+      "git add"
+    ]
+  }
+}
