@@ -65,8 +65,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint . --fix",
+    ".{js,jsx,ts,tsx}": [
+      "eslint --ignore-path .gitignore . --fix",
       "git add"
     ]
   }
