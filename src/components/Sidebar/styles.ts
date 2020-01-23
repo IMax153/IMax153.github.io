@@ -27,6 +27,20 @@ export const StyledSidebar = styled.aside<Props>`
   `)};
 `;
 
+export const StyledSidebarContent = styled.div`
+  padding: 1rem;
+
+  a {
+    color: inherit;
+    transition: ${transition(['color'], 'fast')};
+
+    &:hover {
+      color: #663399;
+      text-decoration: underline;
+    }
+  }
+`;
+
 export const StyledSidebarOverlay = styled.div<Props>`
   position: fixed;
   top: 0;

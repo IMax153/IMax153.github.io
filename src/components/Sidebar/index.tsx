@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from 'react';
 
 import { NavLinks } from '../NavLinks';
-import { StyledSidebar, StyledSidebarOverlay } from './styles';
+import { StyledSidebar, StyledSidebarContent, StyledSidebarOverlay } from './styles';
 
 interface Props {
   shown: boolean;
@@ -28,13 +28,15 @@ export const Sidebar: React.FC<Props> = ({ shown, onClose }) => {
       ref={overlayRef}
     >
       <StyledSidebar role="navigation" shown={shown}>
-        <NavLinks
-          links={[
-            { link: 'about', onClick: onClose },
-            { link: 'projects', onClick: onClose },
-            { link: 'contact', onClick: onClose },
-          ]}
-        />
+        <StyledSidebarContent>
+          <NavLinks
+            links={[
+              { link: 'about', onClick: onClose },
+              { link: 'projects', onClick: onClose },
+              { link: 'contact', onClick: onClose },
+            ]}
+          />
+        </StyledSidebarContent>
       </StyledSidebar>
     </StyledSidebarOverlay>
   );

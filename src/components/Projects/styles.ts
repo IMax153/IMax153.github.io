@@ -12,11 +12,11 @@ export const Grid = styled.div`
   gap: 1rem;
   align-items: center;
 
-  ${mediaQuery.tablet(css`
+  ${mediaQuery.largeMobile(css`
     grid-template-columns: repeat(2, 1fr);
   `)};
 
-  ${mediaQuery.largeMobile(css`
+  ${mediaQuery.tablet(css`
     grid-template-columns: repeat(3, 1fr);
   `)};
 `;
@@ -34,9 +34,13 @@ export const Repository = styled.div`
 `;
 
 export const RepositoryCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
   padding: 1rem;
   background: #fff;
-  height: 100%;
 `;
 
 export const RepositoryContent = styled.div`
