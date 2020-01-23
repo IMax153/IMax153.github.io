@@ -12,13 +12,33 @@ export const Footer: React.FC<Props> = () => {
       <StyledContactDetails>
         <h2>Maxwell Brown</h2>
         <p>maxwellbrown1990@gmail.com</p>
+        <p>
+          Icon made by{' '}
+          <Anchor
+            title="Prettycons profile page"
+            href="https://www.flaticon.com/authors/prettycons"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Prettycons
+          </Anchor>{' '}
+          from{' '}
+          <Anchor
+            title="Flaticon website"
+            href="https://www.flaticon.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            www.flaticon.com
+          </Anchor>
+        </p>
       </StyledContactDetails>
       <StyledSocialLinks>
         <Anchor
+          title="Follow me on Github"
           href="https://github.com/IMax153"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow me on Github"
         >
           <MarkGithub size="32" />
         </Anchor>

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { mediaQuery } from '../../theme/mediaQuery';
+import { transition } from '../../theme/transition';
 
 export const StyledFooter = styled.div`
   display: flex;
@@ -25,7 +26,15 @@ export const StyledContactDetails = styled.div`
   margin-bottom: 1rem;
 
   p {
-    margin: 0 0.5rem;
+    a {
+      color: #663399;
+      transition: ${transition(['color'], 'fast')};
+
+      &:hover {
+        color: #51287a;
+        text-decoration: underline;
+      }
+    }
 
     &:first-child,
     &:last-child {
