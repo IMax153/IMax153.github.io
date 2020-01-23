@@ -4,13 +4,12 @@ import { StyledAnchor } from './styles';
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   offset?: string | (() => number);
+  external?: boolean;
 }
 
-export const Anchor: React.FC<Props> = ({ offset = () => 0, onClick, ...props }) => {
+export const Anchor: React.FC<Props> = ({ offset = () => 0, external, ...props }) => {
   const smoothScroll = useCallback(
     (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-      event.preventDefault();
-
       const offsetAmount = typeof offset === 'function' ? offset : () => parseInt(offset, 10);
 
       const id = event.currentTarget.getAttribute('href')?.slice(1);
@@ -19,6 +18,8 @@ export const Anchor: React.FC<Props> = ({ offset = () => 0, onClick, ...props })
         const anchor = document.getElementById(id);
 
         if (anchor) {
+          event.preventDefault();
+
           const offsetTop = anchor.getBoundingClientRect().top + window.pageYOffset;
 
           window.scroll({
@@ -28,12 +29,19 @@ export const Anchor: React.FC<Props> = ({ offset = () => 0, onClick, ...props })
         }
       }
 
-      if (onClick) onClick(event);
+      if (props.onClick) props.onClick(event);
     },
-    [offset, onClick],
+    [offset, props.onClick], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
-  return <StyledAnchor {...props} onClick={smoothScroll} />;
+  return (
+    <StyledAnchor
+      {...props}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      onClick={smoothScroll}
+    />
+  );
 };
 
 Anchor.displayName = 'Anchor';

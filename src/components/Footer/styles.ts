@@ -42,7 +42,7 @@ export const StyledContactDetails = styled.div`
     }
   }
 
-  ${mediaQuery.largeMobile(css`
+  ${mediaQuery.desktop(css`
     align-items: flex-start;
   `)};
 `;
@@ -52,7 +52,7 @@ export const StyledSocialLinks = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
 
-  ${mediaQuery.largeMobile(css`
+  ${mediaQuery.desktop(css`
     justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 2rem;

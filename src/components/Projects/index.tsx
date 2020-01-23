@@ -58,12 +58,7 @@ export const Projects: React.FC<Props> = () => {
           <Repository key={node.id}>
             <RepositoryCard>
               <RepositoryContent>
-                <Anchor
-                  href={node.url}
-                  aria-label="Check out my projects on Github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Anchor href={node.url} aria-label="Check out my projects on Github" external>
                   {node.name}
                 </Anchor>
                 <p>{node.description}</p>

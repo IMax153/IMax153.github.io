@@ -17,29 +17,18 @@ export const Footer: React.FC<Props> = () => {
           <Anchor
             title="Prettycons profile page"
             href="https://www.flaticon.com/authors/prettycons"
-            target="_blank"
-            rel="noopener noreferrer"
+            external
           >
             Prettycons
           </Anchor>{' '}
           from{' '}
-          <Anchor
-            title="Flaticon website"
-            href="https://www.flaticon.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Anchor title="Flaticon website" href="https://www.flaticon.com/" external>
             www.flaticon.com
           </Anchor>
         </p>
       </StyledContactDetails>
       <StyledSocialLinks>
-        <Anchor
-          title="Follow me on Github"
-          href="https://github.com/IMax153"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Anchor title="Follow me on Github" href="https://github.com/IMax153" external>
           <MarkGithub size="32" />
         </Anchor>
       </StyledSocialLinks>
