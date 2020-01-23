@@ -67,11 +67,11 @@ export const Projects: React.FC<Props> = () => {
               <RepositoryStats>
                 <RepositoryStat>
                   <Star size="14" />
-                  <p>{node.forkCount}</p>
+                  <p>{node.stargazers.totalCount}</p>
                 </RepositoryStat>
                 <RepositoryStat>
                   <RepoForked size="14" />
-                  <p>{node.stargazers.totalCount}</p>
+                  <p>{node.forkCount}</p>
                 </RepositoryStat>
               </RepositoryStats>
             </RepositoryCard>
