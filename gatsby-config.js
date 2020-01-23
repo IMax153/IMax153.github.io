@@ -1,9 +1,6 @@
-if (process.env.NODE_ENV === 'development') {
-  /* eslint-disable-next-line global-require */
-  require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`,
-  });
-}
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   siteMetadata: {
