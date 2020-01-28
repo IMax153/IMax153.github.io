@@ -12,7 +12,7 @@ export const getViewportHideStyles = (on: Device[number][], block: boolean) => {
           `)}
         `
       : viewport === 'smallMobile' &&
-        on.indexOf(viewport) === -1 &&
+        on.indexOf(viewport) !== -1 &&
         css`
           display: none;
         `,

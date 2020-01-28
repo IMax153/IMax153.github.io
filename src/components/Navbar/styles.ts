@@ -15,5 +15,9 @@ export const StyledNavbar = styled.div`
 `;
 
 export const StyledNavbarLogo = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+
+  ${mediaQuery.largeMobile(css`
+    font-size: 1.5rem;
+  `)};
 `;
